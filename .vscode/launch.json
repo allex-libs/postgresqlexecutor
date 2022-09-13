@@ -1,0 +1,83 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Test Exec",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "windows": {
+        "program": "${env:APPDATA}/npm/node_modules/allextesting/commandline/allex-mocha",
+      },
+      "linux": {
+        "program": "${env:HOME}/lib/node_modules/allextesting/commandline/allex-mocha",
+      },
+      "args": ["test/test.exec.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Test Query",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "windows": {
+        "program": "${env:APPDATA}/npm/node_modules/allextesting/commandline/allex-mocha",
+      },
+      "linux": {
+        "program": "${env:HOME}/lib/node_modules/allextesting/commandline/allex-mocha",
+      },
+      "args": ["test/test.query.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Test Sentencing",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "windows": {
+        "program": "${env:APPDATA}/npm/node_modules/allextesting/commandline/allex-mocha",
+      },
+      "linux": {
+        "program": "${env:HOME}/lib/node_modules/allextesting/commandline/allex-mocha",
+      },
+      "args": ["test/test.sentencing.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Test Stepped",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "windows": {
+        "program": "${env:APPDATA}/npm/node_modules/allextesting/commandline/allex-mocha",
+      },
+      "linux": {
+        "program": "${env:HOME}/lib/node_modules/allextesting/commandline/allex-mocha",
+      },
+      "args": ["test/test.stepped.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Test Txn-Wrapped",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "windows": {
+        "program": "${env:APPDATA}/npm/node_modules/allextesting/commandline/allex-mocha",
+      },
+      "linux": {
+        "program": "${env:HOME}/lib/node_modules/allextesting/commandline/allex-mocha",
+      },
+      "args": ["test/test.txnwrapped.js"]
+    }
+  ]
+}
