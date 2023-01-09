@@ -9,6 +9,8 @@ function createPostgreSQLExecutor (execlib, sqlexecutorbaselib) {
   require('./helperjobs')(execlib, mylib);
 
   require('./executorcreator')(execlib, sqlexecutorbaselib.Executor, mylib);
+  sqlexecutorbaselib.createExecutorQueueing(mylib, require('./qinghelperfunctionsproducer')(execlib.lib));
+
 
   return mylib;
 }

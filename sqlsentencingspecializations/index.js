@@ -3,6 +3,13 @@ function createSqlSentencingSpecializations (execlib) {
 
   var lib = execlib.lib;
 
+  
+  var _NULL = 'NULL';
+  function entityNameOf(val){
+    if (!lib.isVal(val)) return _NULL;
+    return val;
+  }
+
   function indexColumnsQueryForTable (tablename) {
     return [
       "select i.indisprimary, i.indcolordinal, ic.relname as indexname, a.attname as colname from (",
@@ -46,7 +53,9 @@ function createSqlSentencingSpecializations (execlib) {
     };
   }
 
+
   return {
+    entityNameOf: entityNameOf,
     indexColumnsQueryForTable: indexColumnsQueryForTable,
     readFieldType: readFieldType,
     createTableCreator: createTableCreator
